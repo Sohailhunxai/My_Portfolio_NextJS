@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import StarsvCanvas from '@/components/main/StarBackground';
+import StarsCanvas from '@/components/main/StarBackground';
+import Navbar from '@/components/main/Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'My-Porfolio',
-  description: 'My-Porfolio',
+  description: 'This-is-My-Porfolio',
 };
 
 export default function RootLayout({
@@ -20,7 +21,8 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden `}
       >
-        <StarsvCanvas />
+        <StarsCanvas />
+        <Navbar />
         {children}
       </body>
     </html>
